@@ -2,7 +2,7 @@ services:
   web:  # Renamed from 'flask' to 'web'
     build: .
     ports:
-      - "5001:5001"  # Host port 5001 to container port 5001
+      - "5000:5000"  # Host port 5001 to container port 5001
     environment:
       - FLASK_ENV=development
     depends_on:
@@ -12,8 +12,8 @@ services:
     image: postgres:13  # Use the official PostgreSQL 13 image
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: your_password  # Replace with your actual password
-      POSTGRES_DB: asad  # This is the database name that will be created
+      POSTGRES_PASSWORD: doston  # Replace with your actual password
+      POSTGRES_DB: dosya # This is the database name that will be created
     ports:
       - "5432:5432"  # Expose port 5432 for PostgreSQL
     volumes:

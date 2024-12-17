@@ -7,10 +7,10 @@ app = Flask(__name__)
 # Connect to the PostgreSQL database
 def get_db_connection():
     conn = psycopg2.connect(
-        dbname="doston",  # Replace with your actual database name
+        dbname="dosya",  # Replace with your actual database name
         user="postgres",  # Replace with your database username
         password="doston",  # Replace with your password
-        host="localhost",
+        host="host.docker.internal",
         port="5432"
     )
     return conn
@@ -57,4 +57,4 @@ def timetable():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", debug=True)
